@@ -1,0 +1,33 @@
+<?php
+if ($this->activeLeftBlock()):
+    $list = $this->getProductList();
+    if ($list) :
+?>
+<div class="block block-mostpopular block2">
+    <div class="block-title">
+        <strong>
+            <span><?php echo $this->getBlockTitle()?></span>
+        </strong>
+    </div>
+    <div class="block-content">
+        <ol class="mini-products-list" id="bestseller-sidebar">
+            <?php foreach($list as $_product): ?>
+            <?php $i++; ?>
+            <li class="item<?php if($i==sizeof($_products) ): ?> last<?php endif; ?>">
+                <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'thumbnail')->resize(50); ?>" width="50" alt="" /></a>
+                <div class="product-details">
+                    <p class="product-name"><a href="<?php echo $this->getProductUrl($_product) ?>"><?php echo $this->htmlEscape($_product->getName()) ?></a></p>
+                    <?php if (Mage::getStoreConfig('similarprod/general/showprice')):?>
+                    <?php echo $this->getPriceHtml($_product, true) ?>
+                    <?php endif; ?>
+                    <?php if ($_product->getData('is_salable') && Mage::getStoreConfig('similarprod/general/showactions')):?>
+                    <p><button type="button" title="<?php echo $this->__('Add to Cart') ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button></p>
+                    <?php endif; ?>
+                </div>
+            </li>
+            <?php endforeach; ?>
+        </ol>
+    </div>
+</div>
+    <?php endif;?>
+<?php endif;?>

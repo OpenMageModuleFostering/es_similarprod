@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<config>
+    <global>
+        <modules>
+            <ES_Similarprod>
+                <version>1.1.0</version>
+            </ES_Similarprod>
+        </modules>
+
+        <blocks>
+            <similarprod>
+                <rewrite>
+                    <similarprod>ES_Similarprod_Block_Products</similarprod>
+                </rewrite>
+            </similarprod>
+        </blocks>
+
+        <helpers>
+            <Similarprod>
+                <class>ES_Similarprod_Helper</class>
+            </Similarprod>
+        </helpers>
+
+    </global>
+
+    <frontend>
+        <routers>
+            <similarprod>
+                <use>standard</use>
+                <args>
+                    <module>ES_Similarprod</module>
+                    <frontName>similarprod</frontName>
+                </args>
+            </similarprod>
+        </routers>
+       <layout>
+            <updates>
+                <similarprod>
+                    <file>similarprod.xml</file>
+                </similarprod>
+            </updates>
+        </layout>
+    </frontend>
+
+    <default>
+        <similarprod>
+            <general>
+                <perblock>2</perblock>
+                <showprice>1</showprice>
+                <showactions>1</showactions>
+                <title>Similar products</title>
+                <blockright>1</blockright>
+                <blockleft>1</blockleft>
+            </general>
+        </similarprod>
+    </default>
+
+    
+
+</config>

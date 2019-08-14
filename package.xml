@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>ES_Similarprod</name>
+    <version>1.1.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>This extension shows similar products in block which is in product view page sidebar.  This extension is great way to suggest customer view more products. Similar products are from the same category as current viewed product.</summary>
+    <description>This extension shows similar products in block which is in product view page sidebar.  This extension is great way to suggest customer view more products. Similar products are from the same category as current viewed product.</description>
+    <notes>Stable release</notes>
+    <authors><author><name>Edvinas Stulpinas</name><user>edas1</user><email>st.edvinas@gmail.com</email></author></authors>
+    <date>2013-02-09</date>
+    <time>09:51:12</time>
+    <contents><target name="magecommunity"><dir name="ES"><dir name="Similarprod"><dir name="Block"><file name="Products.php" hash="001b340b344d43b385d79cd0d4109bdd"/></dir><dir name="Helper"><file name="Data.php" hash="08394abcdfe632c3e615f27d4bcc7b58"/></dir><dir name="etc"><file name="adminhtml.xml" hash="d6357ffa60e9cf4a9e521681b147307b"/><file name="config.xml" hash="4e609ed4b04e07b8e578c34d80009216"/><file name="system.xml" hash="565f7a2d6bb19c467b19cfe02c62c153"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="ES_Similarprod.xml" hash="d503759a45626bf906343718de6a6187"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="similarprod.xml" hash="5f41dba2bd884618a3fbf6c123fbe7b0"/></dir><dir name="template"><dir name="similarprod"><file name="similarprod_left.phtml" hash="8fa5fda059674a719fe4c77480432d29"/><file name="similarprod_right.phtml" hash="46f5bdfd9621b61a2599209efec8499c"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.0.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
