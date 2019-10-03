@@ -1,3 +1,5 @@
+
+
 ## Original Package Description
 
 This extension shows similar products in block which is in product view page sidebar.  This extension is great way to suggest customer view more products. Similar products are from the same category as current viewed product.
